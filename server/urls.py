@@ -24,6 +24,8 @@ from matery.views import añadirMateria
 from biology.views import añadirBiology
 from english.views import RegistroEnglish
 from history.views import añadirHistory
+from chemistry.views import añadirChemistry
+from physical.views import añadirPhysical
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,5 +38,7 @@ urlpatterns = [
     path('biology/',añadirBiology.as_view(), name="biology"),
     path('english/',RegistroEnglish.as_view(), name="english"),
     path('history/',añadirHistory.as_view(), name="history"),
+    path('chemistry/',añadirChemistry.as_view(), name="chemistry"),
+    path('physical/',añadirPhysical.as_view(), name="physical"),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

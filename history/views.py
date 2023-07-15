@@ -9,4 +9,4 @@ class añadirHistory(CreateView):
 	model = History
 	template_name = 'history/new-history.html'
 	form_class = RegistroFormHistory
-	success_url = reverse_lazy('home')
+	success_url = reverse_lazy('chemistry')

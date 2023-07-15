@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from django.urls import reverse_lazy
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +27,7 @@ SECRET_KEY = 'django-insecure-1i2$of30v@@83t6azmzk3vzh%ao8vre-(5@)v2o0q%8u-5q4t3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['server-527i.onrender.com','*']
 
 
 # Application definition
@@ -46,7 +45,9 @@ INSTALLED_APPS = [
     'person',
     'biology',
     'english',
-    'history'
+    'history',
+    'chemistry',
+    'physical',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,14 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db2036',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': 5432
+    }
 }
 
 # Password validation

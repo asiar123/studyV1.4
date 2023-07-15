@@ -21,4 +21,4 @@ class matery(models.Model):
 		verbose_name_plural='materias'
 
 	def __str__(self):
-		return '{}'.format(self.Nombre)
+		return '{}'.format(self.user)

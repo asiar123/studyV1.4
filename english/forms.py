@@ -11,11 +11,18 @@ class RegistroFormEnglish(forms.ModelForm):
 
 		fields = [
 			'usuario',
+			'Nombre',
 			'English1',
 			'English2',
 			'English3',
 			'English4',
 			'English5',
+			'English6',
+			'English7',
+			'English8',
+			'English9',
+			'English10',
+			'English11',
 			
 		]
 		labels = {

@@ -9,15 +9,19 @@ class RegistroFormHistory(forms.ModelForm):
 
 		fields = [
 			'usuario',
+			'Nombre',
 			'History1',
 			'History2',
 			'History3',
 			'History4',
 			'History5',
+			'History6',
+			'History7',
+			'History8',
 			
 		]
 		labels = {
-			'usuario': forms.Select(attrs={'class':'form-control'}),
+			'usuario': 'usuaario',
 			'History1': '¿Como esta conformada la rama legislitiva de Colombia?',
 			'History2': 'La tierra esta constituida por 3 elementos: ¿Cuales son?',
 			'History3': 'La historia de la humanidad se compone en la prehistoria (ágrafo) e historia (4000 a.c)',
@@ -26,6 +30,7 @@ class RegistroFormHistory(forms.ModelForm):
 			
 		}
 		widgets = {
+			'usuario': forms.Select(attrs={'class':'form-control'}),
 			'History1': forms.TextInput(attrs={'class':'form-control'}),
 			'History2': forms.TextInput(attrs={'class':'form-control'}),
 			'History3': forms.TextInput(attrs={'class':'form-control'}),

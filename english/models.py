@@ -23,4 +23,4 @@ class English(models.Model):
 		verbose_name_plural='ingless'
 
 	def __str__(self):
-		return '{}'.format(self.usuario)
+		return '{}'.format(self.Nombre)

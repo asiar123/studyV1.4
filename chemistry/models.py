@@ -5,6 +5,7 @@ from person.models import Persona
 
 class Chemistry(models.Model):
 	usuario_id = models.ForeignKey(Persona, null=True, blank=True, on_delete=models.CASCADE)
+	Nombre = models.CharField(max_length=100, null=True)
 	Chemistry1 = models.CharField(max_length=100, null=True)
 	Chemistry2 = models.CharField(max_length=100, null=True)
 	Chemistry3 = models.CharField(max_length=100, null=True)
@@ -16,4 +17,4 @@ class Chemistry(models.Model):
 		verbose_name_plural='chemistrys'
 
 	def __str__(self):
-		return '{}'.format(self.usuario_id)
+		return '{}'.format(self.Nombre)

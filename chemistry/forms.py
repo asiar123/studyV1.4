@@ -9,6 +9,7 @@ class RegistroFormChemistry(forms.ModelForm):
 
 		fields = [
 			'usuario_id',
+			'Nombre',
 			'Chemistry1',
 			'Chemistry2',
 			'Chemistry3',
